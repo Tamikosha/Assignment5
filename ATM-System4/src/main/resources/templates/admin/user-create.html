@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+</head>
+<body>
+<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+    <table>
+        <tr>
+            <td>
+                <label for="cardNumber">Card number</label>
+            </td>
+            <td>
+                <input type="text" th:field="*{cardNumber}" id="cardNumber" placeholder="Card number">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name">Name</label>
+            </td>
+            <td>
+                <input type="text" th:field="*{name}" id="name" placeholder="Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Password</label>
+            </td>
+            <td>
+                <input type="text" th:field="*{password}" id="password" placeholder="Password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="cardExpiryDate">Card expiry date</label>
+            </td>
+            <td>
+                <input type="text" th:field="*{cardExpiryDate}" id="cardExpiryDate" placeholder="Card expiry date">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CVV">CVV</label>
+            </td>
+            <td>
+                <input type="text" th:field="*{CVV}" id="CVV" placeholder="CVV">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="money">Money</label>
+            </td>
+            <td>
+                <input type="text" th:field="*{money}" id="money" placeholder="Money">
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Create User">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Change PIN</title>
+</head>
+<body>
+<H2>Change PIN</H2>
+<table>
+    <form action="#" th:action="@{/user/changePin}" th:object="${user}" method="post">
+        <tr>
+            <td><label for="id">ID</label></td>
+            <td><input readonly type="number" th:field="*{id}" id="id" placeholder="ID"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="text" th:field="*{password}" id="password" placeholder="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Update User"></td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>

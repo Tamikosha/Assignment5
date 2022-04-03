@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Withdraw Money</title>
+</head>
+<body>
+<h2>Withdraw Money</h2>
+<table>
+    <form action="#" th:action="@{/user/withdrawMoney}" th:object="${user}" method="post">
+        <tr>
+            <td><label for="id">ID</label></td>
+            <td><input readonly type="number" th:field="*{id}" id="id" placeholder="ID"></td>
+        </tr>
+        <tr>
+            <td><label for="money">money</label></td>
+            <td><input type="text" th:field="*{money}" id="money" placeholder="money"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Withdraw Money"></td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>

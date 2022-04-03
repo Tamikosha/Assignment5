@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+<p th:text="'Hello, ' + ${user.cardNumber} + '!'"/>
+<p th:text="'Hello, ' + ${user.name} + '!'"/>
+<a th:href="@{'/user/balance/' + ${user.cardNumber}}">
+    <button>Balance</button>
+</a>
+<a th:href="@{'/user/withdrawMoney/' + ${user.id}}">
+    <button>Withdraw money</button>
+</a>
+<a th:href="@{'/user/topUpAccount/' + ${user.id}}">
+    <button>Top up account</button>
+</a>
+<a th:href="@{'/user/changePin/' + ${user.id}}">
+    <button>Change pin</button>
+</a>
+</body>
+</html>

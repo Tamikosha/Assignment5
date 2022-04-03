@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Top Up Account</title>
+</head>
+<body>
+<h2>Top Up Account</h2>
+<table>
+    <form action="#" th:action="@{/user/topUpAccount}" th:object="${user}" method="post">
+        <tr>
+            <td><label for="id">ID</label></td>
+            <td><input readonly type="number" th:field="*{id}" id="id" placeholder="ID"></td>
+        </tr>
+        <tr>
+            <td><label for="money">money</label></td>
+            <td><input type="text" th:field="*{money}" id="money" placeholder="money"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Top Up Account"></td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>

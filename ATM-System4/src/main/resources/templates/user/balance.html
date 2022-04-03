@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <title>Balance</title>
+</head>
+<body>
+<p th:text="'On account: ' + ${user.cardNumber} "/>
+<p th:text="'The balance is ' + ${user.money} + '!'"/>
+</body>
+</html>

@@ -7,10 +7,6 @@ import org.springframework.data.repository.query.Param;
 
 public interface BankAccountRepository extends JpaRepository<User, Long> {
 
-    @Query("select b from User b where b.cardNumber = :сard_number")
-    User findByCardNumber(@Param("сard_number") String cardNumber);
-
-    @Query("select b from User b where b.cardNumber = :сard_number and b.password = :password")
-    User verification(@Param("сard_number") String cardNumber, @Param("password") String password);
+   
 
 }

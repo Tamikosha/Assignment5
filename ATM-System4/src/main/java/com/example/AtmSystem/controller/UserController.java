@@ -72,51 +72,5 @@ public class UserController {
         return "redirect:/admin/users";
     }
 
-    @GetMapping("/user/withdrawMoney/{id}")
-    public String withdrawMoneyForm(@PathVariable("id") Long id, Model model) {
-        User user = userService.findById(id);
-        model.addAttribute("user", user);
-        return "user/withdrawMoney";
-    }
-
-    @PostMapping("/user/withdrawMoney")
-    public String withdrawMoney(User user) {
-        int moneySum = user.getMoney();
-        user = userService.findById(user.getId());
-        user.setMoney(user.getMoney() - moneySum);
-        userService.saveUser(user);
-        return "user/login";
-    }
-
-    @GetMapping("/user/topUpAccount/{id}")
-    public String topUpAccountForm(@PathVariable("id") Long id, Model model) {
-        User user = userService.findById(id);
-        model.addAttribute("user", user);
-        return "user/topUpAccount";
-    }
-
-    @PostMapping("/user/topUpAccount")
-    public String topUpAccount(User user) {
-        int moneySum = user.getMoney();
-        user = userService.findById(user.getId());
-        user.setMoney(user.getMoney() + moneySum);
-        userService.saveUser(user);
-        return "user/login";
-    }
-
-    @GetMapping("/user/changePin/{id}")
-    public String changePinForm(@PathVariable("id") Long id, Model model) {
-        User user = userService.findById(id);
-        model.addAttribute("user", user);
-        return "user/changePin";
-    }
-
-    @PostMapping("/user/changePin")
-    public String changePin(User user) {
-        String moneySum = user.getPassword();
-        user = userService.findById(user.getId());
-        user.setPassword(moneySum);
-        userService.saveUser(user);
-        return "user/login";
-    }
+    
 }
